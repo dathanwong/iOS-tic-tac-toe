@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,22 +30,99 @@
                                     <constraint firstAttribute="height" constant="50" id="VIh-8Q-xPD"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="r9p-cx-HKc" userLabel="Main Stack View">
-                                <rect key="frame" x="0.0" y="112" width="414" height="635"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="r9p-cx-HKc" userLabel="Main Stack View">
+                                <rect key="frame" x="0.0" y="112" width="414" height="644"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hkj-86-q40">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="209.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IhQ-F4-Xs4">
+                                                <rect key="frame" x="0.0" y="0.0" width="132.5" height="209.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="topLeftClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wIO-oM-PLW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbT-kL-LcX">
+                                                <rect key="frame" x="140.5" y="0.0" width="133" height="209.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="topLeftClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RfO-sg-FPG"/>
+                                                    <action selector="topMidClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GJc-hA-Y0G"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZr-gS-WMs">
+                                                <rect key="frame" x="281.5" y="0.0" width="132.5" height="209.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="topRightClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C60-iP-C0B"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nC1-Ii-UTb">
+                                        <rect key="frame" x="0.0" y="217.5" width="414" height="209"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktz-kR-Lxf">
+                                                <rect key="frame" x="0.0" y="0.0" width="132.5" height="209"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="midLeftClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B5j-Of-7jh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQ3-wt-2uW">
+                                                <rect key="frame" x="140.5" y="0.0" width="133" height="209"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="midMidClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="et0-pN-mee"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5a-DD-8zL">
+                                                <rect key="frame" x="281.5" y="0.0" width="132.5" height="209"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="midRightClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KuC-Qt-pHL"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8jN-nG-XTK">
+                                        <rect key="frame" x="0.0" y="434.5" width="414" height="209.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flH-9b-204">
+                                                <rect key="frame" x="0.0" y="0.0" width="132.5" height="209.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="botLeftClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bdB-ep-W8x"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rm8-c8-bJB">
+                                                <rect key="frame" x="140.5" y="0.0" width="133" height="209.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="botMidClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ijw-7u-a2f"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGA-JF-S24">
+                                                <rect key="frame" x="281.5" y="0.0" width="132.5" height="209.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="botRightClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cvG-Je-H9Z"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6Ww-m2-6Rc" userLabel="Third Stack View">
-                                <rect key="frame" x="0.0" y="752" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="761" width="414" height="41"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acU-lQ-G5y">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
-                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="TEx-h9-l1o"/>
-                                        </constraints>
-                                        <state key="normal" title="Winner Label">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ri-Hf-xpf">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ndA-dV-SHR" userLabel="Bottom Stack View">
@@ -52,11 +130,13 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQV-Wf-Jp1">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
-                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="ENc-mO-eW4"/>
                                         </constraints>
                                         <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="resetClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EL7-aq-K9y"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -79,6 +159,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="botLeftButton" destination="flH-9b-204" id="GOR-Ji-RXY"/>
+                        <outlet property="botMidButton" destination="Rm8-c8-bJB" id="NGQ-2H-sxA"/>
+                        <outlet property="botRightButton" destination="eGA-JF-S24" id="kjw-5h-5Pn"/>
+                        <outlet property="midLeftButton" destination="ktz-kR-Lxf" id="PcL-aR-hR4"/>
+                        <outlet property="midMidButton" destination="mQ3-wt-2uW" id="IZn-du-icx"/>
+                        <outlet property="midRightButton" destination="f5a-DD-8zL" id="SHG-5C-7M5"/>
+                        <outlet property="topLeftButton" destination="IhQ-F4-Xs4" id="gs6-yu-ztM"/>
+                        <outlet property="topMidButton" destination="cbT-kL-LcX" id="4PU-he-TA8"/>
+                        <outlet property="topRightButton" destination="ZZr-gS-WMs" id="5wS-ms-RFb"/>
+                        <outlet property="winnerLabel" destination="3Ri-Hf-xpf" id="OJq-v0-9iV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
